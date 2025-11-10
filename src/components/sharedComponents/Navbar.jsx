@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaLeaf, FaBars, FaTimes } from "react-icons/fa"; // 🌿 Logo + icons
 import Button from "./Button";
+import logo from "/img/logo.png";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,12 +13,14 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-gray-200/50 dark:border-gray-800/50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="relative flex items-center justify-between py-4 md:py-2">
           {/* Logo and Title */}
-          <div className="flex items-center gap-3 text-text-headline dark:text-white">
+          {/* <div className="flex items-center gap-3 text-text-headline dark:text-white">
             <FaLeaf className="size-6 text-primary" />
             <h2 className="font-heading text-lg font-bold">Wellness Connect</h2>
-          </div>
+          </div> */}
+          <div className=""></div>
+          <img src={logo} alt="Wellness Connect logo" className="size-30 absolute top-2.5 z-3" />
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
@@ -25,7 +28,7 @@ const Navbar = () => {
               <Link
                 key={item}
                 to={`/${item.toLowerCase()}`}
-                className="text-sm font-medium hover:text-primary transition-colors text-text-body dark:text-gray-300 dark:hover:text-primary"
+                className="text-md font-medium hover:text-green-600 transition-all duration-300 ease-in text-text-body dark:text-gray-300 dark:hover:text-primary "
               >
                 {item}
               </Link>
@@ -33,10 +36,12 @@ const Navbar = () => {
           </nav>
 
           {/* CTA Button (Desktop only) */}
-          <div className="hidden md:block">
-            <button className="flex min-w-[84px] items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-gradient-to-r from-green-300 to-blue-300 hover:from-green-400 hover:to-blue-400 text-text-headline text-sm font-bold shadow-sm transition-all">
+          <div className="hidden md:flex">
+            {/* <button className="flex min-w-[84px] items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-linear-to-r from-green-300 to-blue-300 hover:from-green-400 hover:to-blue-400 text-text-headline text-sm font-bold shadow-sm transition-all">
               <span className="truncate">Book Now</span>
-            </button>
+            </button> */}
+
+            <Button btnText={"Book Now"} pageUrl={"#"} />
           </div>
 
           {/* Mobile Menu Button */}
@@ -67,7 +72,7 @@ const Navbar = () => {
             </Link>
           ))}
 
-          <Button btnText="Book Now" />
+          <Button btnText="Book Now" pageUrl={"#"} />
         </nav>
       </div>
     </header>

@@ -1,36 +1,24 @@
 import React from "react";
 import { FaInstagram, FaSearch, FaLinkedin } from "react-icons/fa";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
+import { FaChevronUp } from "react-icons/fa";
+import logo from "/img/logo.png";
 
 const Footer = () => {
+  const scrollUpBtn = () => {
+    window.scrollTo(0, 0);
+  };
+
+  const footerYear = new Date();
   return (
-    <footer className="bg-white dark:bg-background-dark border-t border-gray-200/50 dark:border-gray-800/50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="bg-white dark:bg-background-dark border-t border-gray-200/50 dark:border-gray-800/50 p-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col gap-15">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Section */}
-          <div className="md:col-span-1">
-            <div className="flex items-center gap-4 text-text-headline dark:text-white">
-              <div className="size-6 text-primary">
-                <svg
-                  fill="none"
-                  viewBox="0 0 48 48"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    clipRule="evenodd"
-                    d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z"
-                    fill="currentColor"
-                    fillRule="evenodd"
-                  ></path>
-                </svg>
-              </div>
-              <h2 className="font-heading text-lg font-bold">
-                Wellness Connect
-              </h2>
-            </div>
-            <p className="mt-4 text-sm text-text-body dark:text-gray-400">
-              © 2025 Wellness Connect. All rights reserved.
-            </p>
+          <div className="md:col-span-1 flex items-center justify-center">
+            <Link to={'/'}>
+              <img src={logo} alt="Wellness Connect logo" className="size-40" />
+            </Link>
           </div>
 
           {/* Links Section */}
@@ -85,7 +73,7 @@ const Footer = () => {
                 <li>
                   <Link
                     className="text-sm text-text-body dark:text-gray-400 hover:text-primary"
-                    to="/terms-service"
+                    to="/terms-of-service"
                   >
                     Terms of Service
                   </Link>
@@ -94,7 +82,7 @@ const Footer = () => {
             </div>
 
             {/* Connect */}
-            <div>
+            <div className="relative">
               <h3 className="font-bold text-text-headline dark:text-white">
                 Connect
               </h3>
@@ -114,8 +102,23 @@ const Footer = () => {
                   <FaLinkedin className="w-6 h-6" />
                 </Link>
               </div>
+
+              <div className="fixed bottom-10 right-2.5 md:right-10">
+                <FaChevronUp
+                  size={50}
+                  className="p-4 rounded-full bg-linear-to-r from-green-300 to-blue-300 hover:from-green-400 hover:to-blue-400 text-text-headline text-sm font-bold shadow-sm transition-all duration-300 ease-in cursor-pointer hover:scale-120"
+                  onClick={scrollUpBtn}
+                />
+              </div>
             </div>
           </div>
+        </div>
+
+        <div className="flex justify-center items-center border-t border-gray-300">
+          <p className="mt-4 text-sm text-text-body dark:text-gray-400">
+            &copy; {footerYear.getFullYear()} Wellness Connect. All rights
+            reserved.
+          </p>
         </div>
       </div>
     </footer>
