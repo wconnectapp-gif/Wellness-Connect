@@ -17,7 +17,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="md:col-span-1 flex items-center justify-center">
             <Link to={'/'}>
-              <img src={logo} alt="Wellness Connect logo" className="size-40" />
+              <img src={logo} alt="Wellness Connect logo" className="size-30" />
             </Link>
           </div>
 
@@ -115,7 +115,7 @@ const Footer = () => {
         </div>
 
         <div className="flex justify-center items-center border-t border-gray-300">
-          <p className="mt-4 text-sm text-text-body dark:text-gray-400">
+          <p className="mt-4 text-sm text-text-body dark:text-gray-400 text-center">
             &copy; {footerYear.getFullYear()} Wellness Connect. All rights
             reserved.
           </p>

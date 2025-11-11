@@ -13,14 +13,13 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-gray-200/50 dark:border-gray-800/50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative flex items-center justify-between py-4 md:py-2">
+        <div className="flex items-center justify-between py-4 md:py-2">
           {/* Logo and Title */}
           {/* <div className="flex items-center gap-3 text-text-headline dark:text-white">
             <FaLeaf className="size-6 text-primary" />
             <h2 className="font-heading text-lg font-bold">Wellness Connect</h2>
           </div> */}
-          <div className=""></div>
-          <img src={logo} alt="Wellness Connect logo" className="size-30 absolute top-2.5 z-3" />
+          <img src={logo} alt="Wellness Connect logo" className="h-10 w-20 md:w-30 md:h-13 hidde" />
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">

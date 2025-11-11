@@ -66,15 +66,15 @@ const Home = () => {
   return (
     <>
       {/* Hero section */}
-      <section className="bg-linear-to-b from-teal-100 from-45% to-teal-50 p-10">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <header className="relative flex flex-col gap-6 p-30 items-center justify-center rounded-2xl bg-[url('../../public/img/hero.jpg')] bg-cover bg-center">
+      <section className="bg-linear-to-b from-teal-100 from-45% to-teal-50 p-3 md:p-10">
+        <div className="w-full md:max-w-6xl md:mx-auto py-12">
+          <header className="relative flex flex-col gap-6 p-10 md:p-30 items-center justify-center rounded-2xl bg-[url('../../public/img/hero.jpg')] bg-cover bg-center">
             <div className="absolute bg-black/30 inset-0 rounded-2xl"></div>
-            <h1 className="capitalize text-7xl text-center font-semibold text-white z-1">
+            <h1 className="capitalize text-5xl md:text-7xl text-center font-semibold text-white z-1">
               Book Wellness Services Anytime - Stress Less, Live Better
             </h1>
 
-            <div className="flex flex-col gap-5 z-1">
+            <div className="flex flex-col gap-10 z-1">
               <p className="text-white font-medium text-xl text-center">
                 From corporate wellness programs to mindful kids activities —
                 schedule instantly and enjoy a seamless wellness experience.
@@ -153,8 +153,8 @@ const Home = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="flex flex-col gap-16">
             <div className="flex flex-col gap-4 items-center justify-center">
-              <h1 className="font-bold text-5xl">Why Choose Us?</h1>
-              <p className="text-sm font-medium">
+              <h1 className="font-bold text-3xl md:text-5xl text-center">Why Choose Us?</h1>
+              <p className="text-sm font-medium text-center">
                 We provide a seamless and trustworthy experience for all your
                 wellness needs.
               </p>
@@ -215,14 +215,14 @@ const Home = () => {
       {/* What clients say */}
       <section className="bg-gray-100 p-20">
         <div className="flex flex-col gap-15 items-center justify-center">
-          <h1 className="font-bold text-5xl">What Our Clients Say</h1>
+          <h1 className="font-bold text-3xl md:text-5xl text-center">What Our Clients Say</h1>
 
           <div className="flex flex-wrap items-center justify-between gap-5">
             {clientFeedbackData.map((item, index) => {
               const avatar = clientAvatars[item.imageSrc];
               return (
                 <div
-                  className="bg-white shadow-lg p-8 rounded-2xl w-80 h-auto flex flex-col gap-8 hover:scale-105 transition-all duration-300 ease-in"
+                  className="bg-white shadow-lg p-8 rounded-2xl w-60 md:w-80 h-auto flex flex-col gap-8 hover:scale-105 transition-all duration-300 ease-in"
                   key={index}
                 >
                   <div className="flex gap-5 items-center">
@@ -250,7 +250,7 @@ const Home = () => {
       {/* Journey starts here */}
       <section className="bg-teal-50 px-20 py-30">
         <div className="flex flex-col gap-10 items-center justify-center">
-          <h1 className="font-bold text-5xl text-center">
+          <h1 className="font-bold text-3xl md:text-5xl text-center">
             Your wellness journey starts <br /> here.
           </h1>
 
