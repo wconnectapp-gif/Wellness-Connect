@@ -9,6 +9,7 @@ import Contact from './pages/Contact'
 import About from './pages/About'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import TermsOfService from './pages/TermsOfService'
+import Dashboard from './pages/Dashboard'
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route path='/home' element={<Home />}></Route>
         <Route path='/services' element={<Services />}></Route>
         <Route path='/about' element={<About />}></Route>
+        <Route path='/dashboard' element={<Dashboard />}></Route>
         <Route path='/contact' element={<Contact />}></Route>
         <Route path='/privacy-policy' element={<PrivacyPolicy />}></Route>
         <Route path='/terms-service' element={<TermsOfService />}></Route>

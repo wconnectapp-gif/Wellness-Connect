@@ -34,7 +34,7 @@ const Navbar = () => {
 
           {/* CTA Button (Desktop only) */}
           <div className="hidden md:block">
-            <button className="flex min-w-[84px] items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-gradient-to-r from-green-300 to-blue-300 hover:from-green-400 hover:to-blue-400 text-text-headline text-sm font-bold shadow-sm transition-all">
+            <button className="flex min-w-[84px] items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-linear-to-r from-green-300 to-blue-300 hover:from-green-400 hover:to-blue-400 text-text-headline text-sm font-bold shadow-sm transition-all">
               <span className="truncate">Book Now</span>
             </button>
           </div>
