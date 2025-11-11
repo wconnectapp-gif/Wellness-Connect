@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaPlus } from "react-icons/fa6";
 
 export function BookingsList() {
 const bookings = [
@@ -13,13 +14,17 @@ return (
 <div>
 <div className="flex justify-between items-center mb-4">
 <h2 className="text-2xl font-bold">All Bookings</h2>
-<button className="bg-green-600 text-white px-4 py-2 rounded-lg">+ New Booking</button>
+<button className="bg-green-600 flex items-center gap-2 text-black font-bold px-4 py-2 rounded-lg">
+  <FaPlus />
+  New Booking
+</button>
+
 </div>
 
 
 <table className="w-full bg-white rounded-xl shadow-sm">
 <thead>
-<tr className="text-left text-gray-600 border-b">
+<tr className="text-left border-b text-green-900">
 <th className="p-4">Booking ID</th>
 <th className="p-4">Client Name</th>
 <th className="p-4">Service</th>
@@ -51,8 +56,8 @@ book.status === "Confirmed"
 </span>
 </td>
 <td className="p-4 flex gap-3">
-<span className="text-green-600 cursor-pointer">Edit</span>
-<span className="text-red-600 cursor-pointer">Delete</span>
+<button className="text-green-600 cursor-pointer">Edit</button>
+<button className="text-red-600 cursor-pointer">Delete</button>
 </td>
 </tr>
 ))}

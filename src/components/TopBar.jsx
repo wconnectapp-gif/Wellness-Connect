@@ -20,10 +20,10 @@ export function TopBar() {
       {/* Profile section */}
     <div className="flex items-center gap-4">
   <div className="w-6 h-6  flex items-center justify-center">
-    <CiBellOn className='text-2xl' />
+    <CiBellOn className='text-2xl text-green-900' />
   </div>
   
-  <div className="w-10 h-10 bg-gray-400 rounded-full flex items-center justify-center">
+  <div className="w-10 h-10 bg-yellow-700 rounded-full flex items-center justify-center">
     <FaUser className='text-3xl text-white' />
   </div>
 </div>
