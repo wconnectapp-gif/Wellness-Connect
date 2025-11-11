@@ -5,10 +5,9 @@ import { FaUser } from "react-icons/fa";
 
 export function TopBar() {
   return (
-    <div className="flex justify-between items-center mb-10">
+    <div className="flex justify-between items-center mb-10 border-b pb-4 border-gray-300">
       
-      {/* Search Bar */}
-      <div className="flex items-center  px-3 py-2 w-96">
+      <div className="flex items-center px-3 py-2 w-96">
         <FaSearch className="text-green-600 text-xl" />
         <input
           type="text"
@@ -17,19 +16,17 @@ export function TopBar() {
         />
       </div>
 
-      {/* Profile section */}
-    <div className="flex items-center gap-4">
-  <div className="w-6 h-6  flex items-center justify-center">
-    <CiBellOn className='text-2xl text-green-900' />
-  </div>
-  
-  <div className="w-10 h-10 bg-yellow-700 rounded-full flex items-center justify-center">
-    <FaUser className='text-3xl text-white' />
-  </div>
-</div>
+      <div className="flex items-center gap-4">
+        <div className="w-6 h-6 flex items-center justify-center cursor-pointer">
+          <CiBellOn className="text-2xl text-green-900" />
+        </div>
 
-
+        <div className="w-10 h-10 bg-yellow-700 rounded-full flex items-center justify-center">
+          <FaUser className="text-3xl text-white" />
+        </div>
+      </div>
     </div>
   );
 }
+
 

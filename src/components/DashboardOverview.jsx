@@ -12,7 +12,7 @@ const stats = [
 return (
 <div className="mb-10">
 <h1 className="text-3xl  font-bold">Dashboard Overview</h1>
-<p className="text-green-900 mb-6">Welcome back, Admin! Here's what's happening today.</p>
+<p className="text-green-600 mb-6">Welcome back, Admin! Here's what's happening today.</p>
 
 
 <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
