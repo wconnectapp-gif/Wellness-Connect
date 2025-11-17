@@ -68,7 +68,7 @@ const Home = () => {
       {/* Hero section */}
       <section className="bg-linear-to-b from-teal-100 from-45% to-teal-50 p-3 md:p-10">
         <div className="w-full md:max-w-6xl md:mx-auto py-12">
-          <header className="relative flex flex-col gap-6 p-10 md:p-30 items-center justify-center rounded-2xl bg-[url('../../public/img/hero.jpg')] bg-cover bg-center">
+          <header className="relative flex flex-col gap-6 p-10 md:p-30 items-center justify-center rounded-2xl bg-[url('/img/hero.jpg')] bg-cover bg-center">
             <div className="absolute bg-black/30 inset-0 rounded-2xl"></div>
             <h1 className="capitalize text-5xl md:text-7xl text-center font-semibold text-white z-1">
               Book Wellness Services Anytime - Stress Less, Live Better
