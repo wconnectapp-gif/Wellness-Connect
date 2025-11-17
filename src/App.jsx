@@ -9,6 +9,10 @@ import Contact from './pages/Contact'
 import About from './pages/About'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import TermsOfService from './pages/TermsOfService'
+import SelectService from './pages/SelectService'
+import YourDetails from './pages/YourDetails'
+import ConfirmBooking from './pages/ConfirmBooking'
+import BookingSuccess from './pages/BookingSuccess'
 
 const App = () => {
   return (
@@ -24,6 +28,10 @@ const App = () => {
         <Route path='/contact' element={<Contact />}></Route>
         <Route path='/privacy-policy' element={<PrivacyPolicy />}></Route>
         <Route path='/terms-service' element={<TermsOfService />}></Route>
+        <Route path='/select-service' element={<SelectService />}></Route>
+         <Route path="/details" element={<YourDetails />} />
+         <Route path="/confirm" element={<ConfirmBooking />} />
+         <Route path="/success" element={<BookingSuccess/>} />
         <Route path='/*' element={<PageNotFound />}></Route>
       </Routes>
       <div>
