@@ -96,7 +96,7 @@ const Footer = () => {
                   <FaInstagram className="w-6 h-6" />
                 </Link>
                 <Link
-                  to="https://linkedin.in/"
+                  to="https://www.linkedin.com/company/wellness-connect-app/"
                   aria-label="LinkedIn"
                   target="_blank"
                   className="text-blue-600 hover:scale-125 transition-all duration-300 ease-in"
