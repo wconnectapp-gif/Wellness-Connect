@@ -15,7 +15,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo and Title */}
           <div className="flex items-center gap-3 text-text-headline dark:text-white">
-            <FaLeaf className="size-6 text-primary" />
+            <FaLeaf className="size-6 text-[#1ae6c3]" />
             <h2 className="font-heading text-lg font-bold">Wellness Connect</h2>
           </div>
 
