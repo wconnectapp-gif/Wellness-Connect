@@ -17,7 +17,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="md:col-span-1 flex items-center justify-center">
             <Link to={"/"}>
-              <img src={logo} alt="Wellness Connect logo" className="size-30" />
+              <img src={logo} alt="Wellness Connect logo" className="w-30 h-20 " />
             </Link>
           </div>
 

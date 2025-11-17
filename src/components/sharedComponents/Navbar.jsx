@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa"; // 🌿 Logo + icons
 import Button from "./Button";
 import logo from "/img/logo.png";
-import { motion, useScroll } from "motion/react";
+import * as Motion from "motion/react-client";
+import { useScroll } from "motion/react";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,11 +20,13 @@ const Navbar = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-4 md:py-3">
             {/* Logo and Title */}
-            <img
-              src={logo}
-              alt="Wellness Connect logo"
-              className="h-10 w-20 md:w-30 md:h-13"
-            />
+            <Link to="/">
+              <img
+                src={logo}
+                alt="Wellness Connect logo"
+                className="h-10 w-20"
+              />
+            </Link>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-8">
@@ -79,15 +82,15 @@ const Navbar = () => {
           </nav>
         </div>
 
-        <motion.div
+        <Motion.div
           id="scroll-indicator"
           style={{
             scaleX: scrollYProgress,
             position: "absolute",
-            top: 75,
+            top: 68,
             left: 0,
             right: 0,
-            height: 3,
+            height: 5,
             originX: 0,
             zIndex: 100,
             backgroundColor: "#7decb6",
