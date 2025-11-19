@@ -1,5 +1,5 @@
 import React from "react";
-import { FaInstagram, FaSearch, FaLinkedin } from "react-icons/fa";
+import { FaInstagram, FaSearch, FaLinkedin, FaTiktok } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { FaChevronUp } from "react-icons/fa";
 import logo from "/img/logo.png";
@@ -16,8 +16,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="md:col-span-1 flex items-center justify-center">
-            <Link to={'/'}>
-              <img src={logo} alt="Wellness Connect logo" className="size-30" />
+            <Link to={"/"}>
+              <img src={logo} alt="Wellness Connect logo" className="w-30 h-20 " />
             </Link>
           </div>
 
@@ -88,18 +88,29 @@ const Footer = () => {
               </h3>
               <div className="flex items-center space-x-4 mt-4 text-text-body dark:text-gray-400">
                 <Link
-                  to="#"
+                  to="https://www.instagram.com/_wellnessconnect?igsh=azN4Y3dtaDV5a2tz"
                   aria-label="Instagram"
-                  className="hover:text-primary transition-colors"
+                  target="_blank"
+                  className="text-red-600 hover:scale-125 transition-all duration-300 ease-in"
                 >
                   <FaInstagram className="w-6 h-6" />
                 </Link>
                 <Link
-                  to="#"
+                  to="https://www.linkedin.com/company/wellness-connect-app/"
                   aria-label="LinkedIn"
-                  className="hover:text-primary transition-colors"
+                  target="_blank"
+                  className="text-blue-600 hover:scale-125 transition-all duration-300 ease-in"
                 >
                   <FaLinkedin className="w-6 h-6" />
+                </Link>
+
+                <Link
+                  to="https://www.tiktok.com/@_wellnessconnect?_r=1&_t=ZS-91QYa51bHEY"
+                  aria-label="TikTok"
+                  target="_blank"
+                  className="text-black hover:scale-125 transition-all duration-300 ease-in"
+                >
+                  <FaTiktok className="w-6 h-6" />
                 </Link>
               </div>
 
