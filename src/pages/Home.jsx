@@ -88,7 +88,7 @@ const Home = () => {
       </section>
 
       {/* Services section */}
-      <section className="bg-gray-100 p-10">
+      <section className="bg-gray-100 md:p-10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="flex flex-col gap-16">
             <div className="flex flex-col gap-4 items-center justify-center">
@@ -101,7 +101,7 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center justify-center gap-5">
+            <div className="grid grid-cols-2 md:flex md:flex-wrap md:items-center md:justify-center gap-4">
               {[
                 {
                   _id: 1,
@@ -137,7 +137,7 @@ const Home = () => {
                 const Icon1 = icons1[item.icon];
                 return (
                   <div
-                    className="bg-white rounded-2xl flex flex-col items-center gap-8 justify-center px-5 py-4 shadow-lg hover:scale-105 transition-all duration-300 ease-in group h-60 w-60"
+                    className="bg-white rounded-2xl flex flex-col items-center gap-4 md:gap-8 justify-center md:px-5 md:py-4 shadow-lg hover:scale-105 transition-all duration-300 ease-in group w-35 h-45 md:h-45 md:w-50"
                     key={index}
                   >
                     <div className="">
@@ -148,7 +148,7 @@ const Home = () => {
                     </div>
 
                     <div className="flex flex-col gap-2 items-center justify-center">
-                      <h2 className="font-bold text-center">{item.name}</h2>
+                      <h2 className="font-bold text-center text-sm md:text-md">{item.name}</h2>
                       <p className="text-sm">{item.desc}</p>
                     </div>
                   </div>
@@ -160,13 +160,14 @@ const Home = () => {
       </section>
 
       {/* Why choose us */}
-      <section className="bg-teal-50 p-10">
+      <section className="bg-teal-50 md:p-10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="flex flex-col gap-16">
             <div className="flex flex-col gap-4 items-center justify-center">
               <h1 className="font-bold text-3xl md:text-5xl text-center">
                 Why Choose Us?
               </h1>
+
               <p className="text-md font-medium text-center">
                 We provide a seamless and trustworthy experience for all your
                 wellness needs.
@@ -203,7 +204,7 @@ const Home = () => {
                 const Icon2 = icons2[item.icon];
                 return (
                   <div
-                    className="bg-white rounded-2xl flex flex-col items-center gap-8 justify-center px-10 py-6 shadow-lg hover:scale-105 transition-all duration-300 ease-in group text-center w-60 h-auto"
+                    className="bg-white rounded-2xl flex flex-col items-center gap-4 md:gap-8 justify-center px-10 py-6 shadow-lg hover:scale-105 transition-all duration-300 ease-in group text-center md:w-60 h-auto"
                     key={index}
                   >
                     <div className="">
@@ -226,7 +227,7 @@ const Home = () => {
       </section>
 
       {/* What clients say */}
-      <section className="bg-gray-100 p-20">
+      <section className="bg-gray-100 p-10 md:p-20">
         <div className="flex flex-col gap-15 items-center justify-center">
           <div className="flex flex-col gap-16">
             <div className="flex flex-col gap-4 items-center justify-center">
@@ -240,7 +241,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center justify-between gap-5">
+          <div className="flex flex-wrap items-center justify-between gap-5 ">
             {clientFeedbackData.map((item, index) => {
               const avatar = clientAvatars[item.imageSrc];
               return (
@@ -270,8 +271,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
       {/* Journey starts here */}
-      <section className="bg-teal-50 px-20 py-30">
+      <section className="bg-teal-50 p-10 md:px-20 md:py-30">
         <div className="flex flex-col gap-10 items-center justify-center">
           <h1 className="font-bold text-3xl md:text-5xl text-center">
             Your wellness journey starts <br /> here.

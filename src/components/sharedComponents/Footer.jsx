@@ -11,11 +11,11 @@ const Footer = () => {
 
   const footerYear = new Date();
   return (
-    <footer className="bg-white dark:bg-background-dark border-t border-gray-200/50 dark:border-gray-800/50 p-10">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col gap-15">
+    <footer className="bg-white dark:bg-background-dark border-t border-gray-200/50 dark:border-gray-800/50">
+      <div className="md:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col gap-15">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Section */}
-          <div className="md:col-span-1 flex items-center justify-center">
+          <div className="md:col-span-1 flex md:items-center md:justify-center">
             <Link to={"/"}>
               <img src={logo} alt="Wellness Connect logo" className="w-30 h-20 " />
             </Link>
