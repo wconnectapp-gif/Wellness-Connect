@@ -80,7 +80,7 @@ const Home = () => {
               </p>
 
               <div className="flex justify-center">
-                <Button btnText={"Book a Service"} pageUrl={"#"} />
+                <Button btnText={"Book a Service"} pageUrl={"/select-service"} />
               </div>
             </div>
           </header>
@@ -277,7 +277,7 @@ const Home = () => {
             Your wellness journey starts <br /> here.
           </h1>
 
-          <Button btnText={"Book Now"} pageUrl={"#"} />
+          <Button btnText={"Book Now"} pageUrl={"/select-service"} />
         </div>
       </section>
     </>

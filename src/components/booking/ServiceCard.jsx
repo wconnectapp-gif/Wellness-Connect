@@ -16,7 +16,9 @@ const ServiceCard = ({ icon, title, desc }) => {
       }`}
     >
       <div className="flex items-center justify-between">
-        <span className="material-symbols-outlined text-3xl">{icon}</span>
+        <span className="text-green-400 hover:-rotate-180 transition-all duration-300 ease-in">{icon}</span>
+        {/* <span className="material-symbols-outlined text-3xl">{icon}</span> */}
+
         {selected && <span className="material-symbols-outlined text-2xl text-primary"><FaRegCheckCircle /></span>}
       </div>
       <div>

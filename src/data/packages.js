@@ -1,5 +1,5 @@
 export const wellnessPackages = {
-  corporate: [
+  "Corporate Wellness": [
     {
       name: "Starter Package",
       details: "Up to 10 employees, 15-minute massage sessions per employee, basic stress-relief tips",
@@ -23,7 +23,7 @@ export const wellnessPackages = {
     },
   ],
 
-  lifestyle: [
+  "Lifestyle Wellness" : [
     { name: "Swedish Massage (60 mins)", price: 35000 },
     { name: "Swedish Massage (90 mins)", price: 50000 },
     { name: "Aromatherapy Massage (60 mins)", price: 40000 },
@@ -40,7 +40,7 @@ export const wellnessPackages = {
     { name: "Couple Massage + Yoga (90 mins)", price: 120000 },
   ],
 
-  therapeutic: [
+  "Therapeutic Wellness": [
     { name: "Pain Relief Massage (60 mins)", price: 50000 },
     { name: "Arthritis Relief Massage (60 mins)", price: 55000 },
     { name: "Diabetic Care Massage (60 mins)", price: 55000 },
@@ -48,7 +48,7 @@ export const wellnessPackages = {
     { name: "Rehabilitation Massage (60 mins)", price: 65000 },
   ],
 
-  party: [
+  "Spa & Yoga Party Packages": [
     { name: "Spa + Yoga (6–8 people) – 30 mins", price: 180000 },
     { name: "Spa + Yoga (9–12 people) – 30 mins", price: 260000 },
     { name: "Spa + Yoga (13–16 people) – 30 mins", price: 350000 },
@@ -57,7 +57,7 @@ export const wellnessPackages = {
     { name: "Spa + Yoga (11–14 people) – 60 mins", price: 450000 },
   ],
 
-  yoga: [
+  "Yoga Packages": [
     { name: "Private Yoga (1 person, 30 mins)", price: 30000 },
     { name: "Couple Yoga (2 persons, 30 mins)", price: 50000 },
     { name: "Corporate Starter Flow (up to 10 employees, 30 mins)", price: 150000 },
@@ -67,7 +67,7 @@ export const wellnessPackages = {
     { name: "Small Group Yoga (6–10ppl, 60 mins)", price: 100000 },
   ],
 
-  kids: [
+  "Kids Yoga": [
     { name: "Single Session (45 mins)", price: 30000 },
     { name: "4-Week Package", price: 100000 },
     { name: "8-Week Program", price: 220000 },

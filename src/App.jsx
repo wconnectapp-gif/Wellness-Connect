@@ -15,6 +15,7 @@ import SelectService from './pages/SelectService'
 import YourDetails from './pages/YourDetails'
 import ConfirmBooking from './pages/ConfirmBooking'
 import BookingSuccess from './pages/BookingSuccess'
+import ServiceDetails from "./pages/ServiceDetails";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -34,6 +35,7 @@ const App = () => {
         <Route index element={<Home />}></Route>
         <Route path='/home' element={<Home />}></Route>
         <Route path='/services' element={<Services />}></Route>
+        <Route path="/services/:id" element={<ServiceDetails/>} />
         <Route path='/about' element={<About />}></Route>
         <Route path='/contact' element={<Contact />}></Route>
         <Route path='/privacy-policy' element={<PrivacyPolicy />}></Route>

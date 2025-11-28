@@ -5,25 +5,60 @@ import { useNavigate } from "react-router-dom";
 import { wellnessPackages } from "../data/packages";
 import { useContext } from "react";
 import { BookingContext } from "../components/context/BookingContext";
+import {
+  MdSelfImprovement,
+  MdHealthAndSafety,
+  MdCorporateFare,
+} from "react-icons/md";
+import { GiPartyPopper, GiMeditation } from "react-icons/gi";
+import { FaChild } from "react-icons/fa6";
 
 const SelectService = () => {
   const navigate = useNavigate();
   const services = [
-    { icon: "self_improvement", title: "Lifestyle", desc: "Relaxing massages and rejuvenating treatments." },
-    { icon: "spa and yoga party", title: "party", desc: "Mindful classes and private yoga sessions." },
-    { icon: "yoga packages", title: "yoga", desc: "Mindful classes and private yoga sessions." },
-    { icon: "Therapeutic Massages", title: "therapeutic", desc: "for arthritis, diabetes, back pain, recovery" },
-    { icon: "corporate_fare", title: "Corporate", desc: "Wellness programs for your entire workplace." },
-    { icon: "child_care", title: "Kids", desc: "Fun and engaging wellness for children." },
+    {
+      icon: <MdSelfImprovement className="text-3xl text-primary" />,
+      title: "Lifestyle Wellness",
+      desc: "Relaxing massages and rejuvenating treatments.",
+    },
+    {
+      icon: <GiPartyPopper className="text-3xl text-primary" />,
+      title: "Spa & Yoga Party Packages",
+      desc: "Mindful classes and private yoga sessions.",
+    },
+    {
+      icon: <GiMeditation className="text-3xl text-primary" />,
+      title: "Yoga Packages",
+      desc: "Mindful classes and private yoga sessions.",
+    },
+    {
+      icon: <MdHealthAndSafety className="text-3xl text-primary" />,
+      title: "Therapeutic Wellness",
+      desc: "for arthritis, diabetes, back pain, recovery",
+    },
+    {
+      icon: <MdCorporateFare className="text-3xl text-primary" />,
+      title: "Corporate Wellness",
+      desc: "Wellness programs for your entire workplace.",
+    },
+    {
+      icon: <FaChild className="text-3xl text-primary" />,
+      title: "Kids Yoga",
+      desc: "Fun and engaging wellness for children.",
+    },
   ];
 
   const { bookingData, setBookingData } = useContext(BookingContext);
 
-  const selectedServiceKey = bookingData.service?.toLowerCase();
+  const selectedServiceKey = bookingData.service;
   const showPackages = wellnessPackages[selectedServiceKey];
 
+  const canContinue =
+    Boolean(bookingData.service) && Boolean(bookingData.package);
+
   return (
-    <div className="min-h-screen bg-background-light">
+    // <div className="min-h-screen bg-background-light">
+    <div className="min-h-screen max-w-6xl mx-auto px-6 py-12 bg-background-light">
       <main className="flex flex-col gap-8 py-8 sm:py-10">
         <ProgressBar label="Select a Service" percent={33} />
 
@@ -47,7 +82,9 @@ const SelectService = () => {
         {/* PACKAGE DROPDOWN */}
         {showPackages && (
           <div className="px-4 sm:px-10 mt-5">
-            <label className="font-semibold text-sm sm:text-base">Select Package:</label>
+            <label className="font-semibold text-sm sm:text-base">
+              Select Package:
+            </label>
             <select
               value={bookingData.package}
               onChange={(e) => {
@@ -73,8 +110,15 @@ const SelectService = () => {
         {/* FOOTER BUTTON */}
         <footer className="flex justify-center mt-8 sm:mt-10">
           <button
-            onClick={() => navigate("/details")}
-            className="bg-primary text-[#0d1b12] font-bold px-6 sm:px-10 py-3 rounded-xl hover:shadow-lg text-sm sm:text-base"
+            disabled={!canContinue}
+            onClick={() => {
+              navigate("/details");
+            }}
+            className={`font-bold px-6 sm:px-10 py-3 rounded-xl text-sm sm:text-base transition-all ${
+              canContinue
+                ? "bg-primary text-[#0d1b12] hover:shadow-lg"
+                : "bg-gray-300 text-gray-500 cursor-not-allowed"
+            }`}
           >
             Continue
           </button>

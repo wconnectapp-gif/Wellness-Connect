@@ -47,7 +47,7 @@ const Navbar = () => {
               <span className="truncate">Book Now</span>
             </button> */}
 
-              <Button btnText={"Book Now"} pageUrl={"#"} />
+              <Button btnText={"Book Now"} pageUrl={"/select-service"} />
             </div>
 
             {/* Mobile Menu Button */}

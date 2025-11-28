@@ -93,7 +93,7 @@ import { useContext } from "react";
 import { BookingContext } from "../components/context/BookingContext";
 import ProgressBar from "../components/booking/ProgressBar";
 import { PaystackButton } from "react-paystack";
-// import { FlutterWaveButton, closePaymentModal } from "flutterwave-react-v3";
+import { FlutterWaveButton, closePaymentModal } from "flutterwave-react-v3";
 import { useNavigate } from "react-router-dom";
 
 const ConfirmBooking = () => {
@@ -125,10 +125,10 @@ const ConfirmBooking = () => {
     publicKey: paystackKey,
     text: "Pay with Paystack",
     onSuccess: () => {
-      alert("Payment Successful!");
+      // alert("Payment Successful!");
       navigate("/success");
     },
-    onClose: () => alert("Payment window closed."),
+    // onClose: () => alert("Payment window closed."),
   };
 
   // Flutterwave Configuration
@@ -156,12 +156,12 @@ const ConfirmBooking = () => {
     callback: (response) => {
       console.log(response);
       if (response.status === "successful") {
-        alert("Payment Successful!");
+        // alert("Payment Successful!");
         closePaymentModal();
         navigate("/success");
       }
     },
-    onClose: () => alert("Payment closed."),
+    // onClose: () => alert("Payment closed."),
   };
 
   return (
